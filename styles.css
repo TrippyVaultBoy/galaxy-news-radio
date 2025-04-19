@@ -95,8 +95,19 @@
     height: 80px;
 }
 
+.artist_img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
 .track_info h3 {
     font-size: medium;
+}
+
+.muteIcon {
+    width: 25px;
+    height: 25px;
 }
 
 .volumeSlider {

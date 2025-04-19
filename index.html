@@ -61,15 +61,26 @@
             <!-- Music Player -->
             <div class="player border d-flex justify-content-around align-items-center" style="border-color: #967a7a !important;
                                                                         background-color: #967a7a !important;">
-                <div class="play_pause d-flex flex-row">
-                    <img class="play_pause_img" src="./images/play-button.png">
-                    <div class="track_info d-flex flex-column">
-                        <h4>Now Playing:</h4>
-                        <h3>Maybe</h3>
-                        <h3>The Ink Spots</h3>
-                    </div>
+                <!-- Play/Pause Button-->
+                <div class="play_pause">
+                    <img class="play_pause_img" src="./images/icons/play-button.png">
                 </div>
-                <div>
+                
+                <!-- Track Info -->
+                <div class="track_info d-flex flex-row align-items-center">
+                    <img class="artist_img me-2" src="./images/artists/ink_spots.jpg">
+                    <div class="track_info d-flex flex-column justify-content-around">
+                        <h4>Now Playing:</h4>
+                        <div class="track_name">
+                            <h3>Maybe</h3>
+                            <h3>The Ink Spots</h3>
+                        </div>
+                    </div> 
+                </div>
+                
+                <!-- Volume Slider -->
+                <div class="volume d-flex flex-row justify-content-center align-items-center">
+                    <img class="muteIcon me-2" src="./images/icons/volume.png">
                     <input type="range" class="volumeSlider" min="0" max="1" step="0.01" value="0.5">
                 </div>
             </div>
