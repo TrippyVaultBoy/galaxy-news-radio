@@ -95,6 +95,10 @@
     height: 80px;
 }
 
+.track_info h3 {
+    font-size: medium;
+}
+
 .volumeSlider {
     background-color: black;
 }
