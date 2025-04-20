@@ -61,7 +61,7 @@
         <main>
 
             <!-- Music Player -->
-            <div class="player border d-flex justify-content-around align-items-center" style="border-color: #967a7a !important;
+            <div class="player border d-flex flex-row-reverse flex-md-row justify-content-around align-items-center" style="border-color: #967a7a !important;
                                                                         background-color: #967a7a !important;">
                 
                 <audio id="audioPlayer"></audio>
@@ -84,7 +84,7 @@
                 </div>
                 
                 <!-- Volume Slider -->
-                <div class="volume d-flex flex-row justify-content-center align-items-center">
+                <div class="volume d-none d-md-flex flex-row justify-content-center align-items-center">
                     <button id="muteButton" class="me-2"></button>
                     <input type="range" id="volumeSlider" class="volumeSlider" min="0" max="1" step="0.01" value="0.5">
                 </div>
