@@ -114,9 +114,14 @@ html, body {
     font-size: medium;
 }
 
-.muteIcon {
+#muteButton {
     width: 25px;
     height: 25px;
+    background-image: url(./images/icons/volume.png);
+    background-size: contain;
+    background-position: center;
+    border: none;
+    background-color: transparent;
 }
 
 .volumeSlider {

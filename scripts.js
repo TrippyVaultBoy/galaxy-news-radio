@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Anything Goes",
             artist: "Cole Porter",
             song: "./audio/music/Anything Goes - Cole Porter.mp3",
-            intro: "./audio/intros/into_each_life_some_rain_must_fall_intro.ogg",
+            intro: "./audio/intros/anything_goes_intro.ogg",
             outro: "./audio/outros/anything_goes_outro.ogg",
             image: "./images/artists/Cole_Porter.jpg",
         },
@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const player = document.getElementById("audioPlayer");
     const playButton = document.getElementById("play_pause_button");
+    const muteButton = document.getElementById("muteButton");
+    const volumeSlider = document.getElementById("volumeSlider");
 
     let currentTrack = null;
     let segmentQueue = []; //intro, song, outro
@@ -114,5 +116,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     player.addEventListener('ended', () => {
         playNextInQueue();
+    });
+
+    muteButton.addEventListener('click', () => {
+        if (player.muted) {
+            player.muted = false;
+            muteButton.style.backgroundImage = "url('./images/icons/volume.png')";
+        } else {
+            player.muted = true;
+            muteButton.style.backgroundImage = "url('./images/icons/mute.png')";
+        }
+    });
+
+    volumeSlider.addEventListener('input', () => {
+        player.volume = volumeSlider.value;
     });
 })
