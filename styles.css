@@ -13,6 +13,10 @@
     background-color: var(--backgroundColor);
 }
 
+html, body {
+    overscroll-behavior: none;
+}
+
 .navbar {
     padding-top: 2.25rem;
     padding-bottom: 2.25rem;
@@ -90,12 +94,17 @@
     height: 100px;
 }
 
-.play_pause_img {
+#play_pause_button {
     width: 80px;
     height: 80px;
+    background-image: url(./images/icons/play-button.png);
+    background-size: contain;
+    background-position: center;
+    border: none;
+    background-color: transparent;
 }
 
-.artist_img {
+#artist_img {
     width: 75px;
     height: 75px;
     border-radius: 50%;
