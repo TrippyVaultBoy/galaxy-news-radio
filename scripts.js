@@ -122,13 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (player.muted) {
             player.muted = false;
             muteButton.style.backgroundImage = "url('./images/icons/volume.png')";
+            console.log("Player unmuted");
         } else {
             player.muted = true;
             muteButton.style.backgroundImage = "url('./images/icons/mute.png')";
+            console.log("Player muted");
         }
     });
 
     volumeSlider.addEventListener('input', () => {
         player.volume = volumeSlider.value;
+        console.log("Volume set to:", volumeSlider.value);
     });
 })
