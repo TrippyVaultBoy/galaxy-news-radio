@@ -31,6 +31,13 @@ html, body {
     position:relative;
 }
 
+@media (max-width: 992px) {
+    .center {
+        width: 300px;
+        transform: scale(0.8);
+    }
+}
+
 .image {
     height: 150px;
     width: 80px;
