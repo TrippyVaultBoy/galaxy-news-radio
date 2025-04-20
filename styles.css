@@ -94,6 +94,12 @@ html, body {
     height: 100px;
 }
 
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 #play_pause_button {
     width: 80px;
     height: 80px;
@@ -112,6 +118,13 @@ html, body {
 
 .track_info h3 {
     font-size: medium;
+}
+
+@media (max-width: 576px) {
+    #track_title,
+    #track_artist {
+      max-width: 120px;
+    }
 }
 
 #muteButton {
