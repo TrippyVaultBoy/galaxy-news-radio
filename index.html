@@ -9,13 +9,15 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="./styles.css">
 
         <script src="./scripts.js"></script>
 
     </head>
+
+    <!-- Header -->
     <header>
         <nav class="navbar anton-regular navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -57,12 +59,131 @@
             </div>
         </nav>
     </header>
+    
+    <!-- Body -->
     <body class="customBackgroundColor">
+        
+        <aside>
+
+        </aside>
+        
         <main>
+            <container class="col-12 col-lg-10 d-flex mx-auto flex-column justify-content-lg-center flex-lg-row">              
+                <div id="articles_container" class="order-lg-0 pe-3 pb-3 col-12 col-lg-10"> 
+                    <!-- Featured Article -->
+                    <div id="featured_container" class="mt-5">
+                        <div class="card ellipsis" style="height: 250px; text-wrap: wrap;">
+                            <div class="d-flex no-gutters">
+                                <div class="col-6 col-md-6">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: red; background-color: aquamarine;"><small class="text-muted"></small>Breaking News</p>
+                                        <h5 class="card-title">Chinese Invasion of Anchorage, Alaska</h5>
+                                        <p class="card-text">In a shocking turn of events, Chinese forces have launched a full-scale invasion of Anchorage, Alaska, sparking fierce battles across the region. Experts fear this could be the beginning of a wider conflict in the Arctic, with global implications for national security and the balance of power.</p>
+                                    </div>
+                                </div>
+                                <img src="./images/article_images/alaska_invasion.webp" class="col-6 col-md-6" style="height: 250px;" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Articles -->
+                    <div class="card-group col-12 gap-3 d-flex flex-column flex-md-row justify-content-between mt-3">
+                        <div class="card w-100 d-flex flex-row flex-md-column">
+                            <img src="./images/article_images/mr_handy.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                <p class="card-text"><small class="text-muted"></small>Science & Tech</p>
+                                <h5 class="card-title">RobCo Unveils Mr. Handy Mark III</h5>
+                                <p class="card-text">The newest model features advanced AI and triple-arm multitasking for domestic efficiency.</p>   
+                            </div>
+                        </div>
+
+                        <div class="card w-100 d-flex flex-row flex-md-column">
+                            <img src="./images/article_images/nuclear_fusion.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                <p class="card-text"><small class="text-muted"></small>Science & Tech</p>
+                                <h5 class="card-title">Mass Fusion Achieves Nuclear Breakthrough</h5>
+                                <p class="card-text">Scientists report stable, sustained fusion—paving the way for limitless clean energy.</p>
+                            </div>
+                        </div>
+
+                        <div class="card w-100 d-flex flex-row flex-md-column">
+                            <img src="./images/article_images/nuka_cola_quantum.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                <p class="card-text"><small class="text-muted"></small>Lifestyle & Culture</p>
+                                <h5 class="card-title">Nuka-Cola Launches Quantum Flavor</h5>
+                                <p class="card-text">This glowing new soda packs twice the taste and a bold atomic blue sparkle.</p>
+                            </div>
+                        </div>
+
+                        <div class="card w-100 d-flex flex-row flex-md-column">
+                            <img src="./images/article_images/vault_76.png" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                <p class="card-text"><small class="text-muted"></small>Lifestyle & Culture</p>
+                                <h5 class="card-title">Vault 76 Officially Opens Its Doors</h5>
+                                <p class="card-text">Residents begin their new lives underground in this state-of-the-art Vault-Tec facility.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Articles -->
+                    <div class="card-group col-12 gap-3 d-flex flex-column flex-md-row justify-content-between mt-3">
+                        <div class="card w-100 d-flex flex-row flex-md-column">
+                            <img src="./images/article_images/silver_shroud.avif" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                <p class="card-text"><small class="text-muted"></small>Entertainment</p>
+                                <h5 class="card-title">Silver Shroud Returns to the Airwaves</h5>
+                                <p class="card-text">The masked vigilante’s classic radio dramas are thrilling listeners across the Commonwealth.</p>
+                            </div>
+                        </div>
+
+                        <div class="card w-100 d-flex flex-row flex-md-column">
+                            <img src="./images/article_images/nuka_world.jpg" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                <p class="card-text"><small class="text-muted"></small>Entertainment</p>
+                                <h5 class="card-title">Nuka-World Opens to the Public</h5>
+                                <p class="card-text">The massive theme park offers fun, thrills, and sugary delights for the whole family.</p>
+                            </div>
+                        </div>
+
+                        <div class="card w-100 d-flex flex-row flex-md-column">
+                            <img src="./images/article_images/nuclear_war.png" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                <p class="card-text"><small class="text-muted"></small>World Affairs</p>
+                                <h5 class="card-title">Tensions Rise Amid Nuclear Concerns</h5>
+                                <p class="card-text">Experts warn that growing global conflict could lead to full-scale atomic warfare.</p>
+                            </div>
+                        </div>
+
+                        <div class="card w-100 d-flex flex-row flex-md-column">
+                            <img src="./images/article_images/las_vegas.jpg" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                <p class="card-text"><small class="text-muted"></small>Business & Economy</p>
+                                <h5 class="card-title">Mr. House: The Man Behind Las Vegas' Prosperity</h5>
+                                <p class="card-text">Robert House controls Las Vegas, shaping its future with tech and unwavering authority.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placehlder assside delete later!! -->
+                <div id="aside_container">
+                    <aside class="col-12 col-md-2 bg-light border w-100 rounded p-3 shadow-sm mb-4 mt-lg-5" style="max-width: 300px;">
+                        <h5 class="mb-3">🌤 Weather</h5>
+                        <p class="text-muted">Loading current weather...</p>
+                        <!-- Optional placeholder icons/info -->
+                        <div class="d-flex align-items-center">
+                          <i class="bi bi-cloud-sun-fill display-6 me-3 text-primary"></i>
+                          <div>
+                            <strong>--°C</strong><br>
+                            <small class="text-muted">City, Country</small>
+                          </div>
+                        </div>
+                      </aside>
+                </div>
+            </container>
 
             <!-- Music Player -->
-            <div class="player border d-flex flex-row-reverse flex-md-row justify-content-around align-items-center" style="border-color: #967a7a !important;
-                                                                        background-color: #967a7a !important;">
+            <div class="player border d-flex flex-row-reverse flex-md-row justify-content-around align-items-center" style="border-color: #967a7a !important; background-color: #967a7a !important;">
                 
                 <audio id="audioPlayer"></audio>
 
@@ -92,7 +213,14 @@
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     </body>
-    <footer>
-        
+   
+    <!-- Placeholder footer delete later!! -->
+    <footer class="bg-dark text-light py-4 mt-auto">
+
     </footer>
+
+    <!-- Spacer for Player -->
+    <div style="width: 100%; height: 100px;">
+
+    </div>
 </html>
