@@ -1,6 +1,7 @@
 :root {
     --backgroundColor: #c6d2c8;
-    --customGreen: #967a7a; 
+    --customGreen: #967a7a;
+    --customBlue: #2c63ae; 
 }
 
 .anton-regular {
@@ -116,6 +117,11 @@ html, body {
     font-weight: 300;
     font-style: bold;
     font-size: larger;
+    transition: color 0.4s ease;
+}
+
+.card h5:hover {
+    color: var(--customBlue);
 }
 
 .card p {
@@ -123,6 +129,11 @@ html, body {
     font-weight: 400;
     font-style: normal;
     font-size: medium;
+    transition: color 0.4s ease;
+}
+
+.card p:hover {
+    color: var(--customBlue);
 }
 
 .player {

@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const muteButton = document.getElementById("muteButton");
     const volumeSlider = document.getElementById("volumeSlider");
 
+    let tempVolume = 0;
+
     let currentTrack = null;
     let segmentQueue = []; //intro, song, outro
     let isPlaying = false;
@@ -122,16 +124,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (player.muted) {
             player.muted = false;
             muteButton.style.backgroundImage = "url('./images/icons/volume.png')";
+            volumeSlider.value = tempVolume;
             console.log("Player unmuted");
         } else {
             player.muted = true;
             muteButton.style.backgroundImage = "url('./images/icons/mute.png')";
+            tempVolume = player.volume;
+            volumeSlider.value = 0;
             console.log("Player muted");
         }
     });
 
     volumeSlider.addEventListener('input', () => {
         player.volume = volumeSlider.value;
+        tempVolume = volumeSlider.value;
         console.log("Volume set to:", volumeSlider.value);
     });
 })
