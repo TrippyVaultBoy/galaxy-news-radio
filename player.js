@@ -125,12 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
             player.muted = false;
             muteButton.style.backgroundImage = "url('./images/icons/volume.png')";
             volumeSlider.value = tempVolume;
+            document.getElementById("volumeSlider").disabled = true;
             console.log("Player unmuted");
         } else {
             player.muted = true;
             muteButton.style.backgroundImage = "url('./images/icons/mute.png')";
             tempVolume = player.volume;
             volumeSlider.value = 0;
+            document.getElementById("volumeSlider").disabled = true;
             console.log("Player muted");
         }
     });
