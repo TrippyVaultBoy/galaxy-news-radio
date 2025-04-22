@@ -51,6 +51,25 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ];
 
+    hellos = [
+        "./audio/hellos/hello_0.ogg",
+        "./audio/hellos/hello_1.ogg",
+        "./audio/hellos/hello_2.ogg",
+        "./audio/hellos/hello_3.ogg",
+        "./audio/hellos/hello_4.ogg",
+        "./audio/hellos/hello_5.ogg",
+        "./audio/hellos/hello_6.ogg",
+        "./audio/hellos/hello_7.ogg",
+        "./audio/hellos/hello_8.ogg",
+        "./audio/hellos/hello_9.ogg",
+        "./audio/hellos/hello_10.ogg",
+    ];
+
+    transitions = [
+        "./audio/transitions/transition_0.ogg",
+        "./audio/transitions/transition_1.ogg",
+    ];
+
     const player = document.getElementById("audioPlayer");
     const playButton = document.getElementById("play_pause_button");
     const muteButton = document.getElementById("muteButton");
@@ -72,7 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function buildSegment(track) {
-        segmentQueue = [track.intro, track.song, track.outro];
+        let hello = hellos[Math.floor(Math.random() * hellos.length)];
+        let transition = transitions[Math.floor(Math.random() * transitions.length)];
+
+        segmentQueue = [hello, transition, track.intro, track.song, track.outro];
     }
 
     function updateTrackInfo(track) {
@@ -94,7 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTrackInfo(currentTrack);
         }
 
-        updateTrackInfo(currentTrack);
+        // If hello has played update track info
+        if (segmentQueue.length === 3) {
+            updateTrackInfo(currentTrack);
+        }
+
         const next = segmentQueue.shift();
         player.src = next;
         player.play();
