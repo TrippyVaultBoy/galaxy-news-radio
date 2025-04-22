@@ -180,13 +180,4 @@ document.addEventListener('DOMContentLoaded', () => {
         player.volume = Math.min(Math.max(volume, 0), 1);
         tempVolume = player.volume;
     });
-
-    document.addEventListener("visibilitychange", () => {
-        if (document.visibilityState === "hidden" && player.playing) {
-            player.pause();
-        }
-        if (document.visibilityState === "visible" && isPlaying) {
-            player.play().catch(e => console.error('Playback failed:', e));
-        }
-    });
 })
