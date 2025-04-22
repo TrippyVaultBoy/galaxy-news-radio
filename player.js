@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ];
 
-    hellos = [
+    const hellos = [
         "./audio/hellos/hello_0.mp3",
         "./audio/hellos/hello_1.mp3",
         "./audio/hellos/hello_2.mp3",
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "./audio/hellos/hello_10.mp3",
     ];
 
-    transitions = [
+    const transitions = [
         "./audio/transitions/transition_0.mp3",
         "./audio/transitions/transition_1.mp3",
     ];
