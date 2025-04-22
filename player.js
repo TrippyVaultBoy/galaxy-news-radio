@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     player.setAttribute('webkit-playsinline', '');
 
     if (window.innerWidth < 768) {
-        player.volume = 0.1;
-        volumeSlider.value = 0.1;
+        player.volume = 0.05;
+        volumeSlider.value = 0.05;
         volumeSlider.disabled = true;
     }
 
