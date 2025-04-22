@@ -23,19 +23,14 @@
     <!-- Header -->
     <header>
         <nav class="navbar anton-regular navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+            <div class="container-fluid d-flex justify-content-between align-items-center w-100">
 
+                <!-- Left Logo -->
                 <a class="navbar-brand ms-4 d-none d-lg-block" href="index.html">GALAXY NEWS NETWORK
                     <span class="ms-2" style="font-size: small; font-weight: lighter;">Washington D.C.</span>
                 </a>
 
-                <!-- Search Button -->  
-                <!-- <form class="d-none d-lg-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form> -->
-
-                <!-- Navbar Brand -->
+                <!-- Center Logo -->
                 <a class="position-absolute top-50 start-50 translate-middle" href="index.html">
                     <div class="center">
                         <div class="rectangle1"></div>
@@ -47,7 +42,7 @@
                     </div>
                 </a>
 
-                <!-- Hamburger Icon -->
+                <!-- Right Hamburger Icon -->
                 <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -76,7 +71,7 @@
             <container class="col-12 col-lg-10 d-flex mx-auto flex-column justify-content-lg-center flex-lg-row">
                 <div id="articles_container" class="order-lg-0 px-3 px-lg-0 pb-3 col-12 col-lg-11"> 
                     
-
+                    <!-- Weather -->
                     <!-- <div class="card shadow col-10 mx-auto mt-5 d-flex">
                         <div class="w-100 d-flex flex-column justify-content-between mx-auto">
                             <h5 class="mb-3 text-center">🌤 Weather</h5>
@@ -115,7 +110,7 @@
                     
                     <!-- Featured Article -->
                     <div id="featured_container" class="mt-5">
-                        <a href="chinese-invasion.html" style="text-decoration: none;">
+                        <a href="./chinese-invasion.html" style="text-decoration: none;">
                             <div class="card shadow ellipsis" style="height: 250px; text-wrap: wrap;">
                                 <div class="d-flex no-gutters">
                                     <div class="col-6 col-md-6">
@@ -134,39 +129,47 @@
                     <!-- Articles -->
                     <div class="card-group col-12 gap-3 d-flex flex-column flex-md-row justify-content-between mt-3">
                         <div class="card shadow w-100 d-flex flex-row flex-md-column">
-                            <img src="./images/article_images/mr_handy.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
-                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
-                                <p class="card-text main-card-p"><small class="text-muted"></small>Science & Tech</p>
-                                <h5 class="card-title main-card-h5">RobCo Unveils Mr. Handy Mark III</h5>
-                                <p class="card-text main-card-p">The newest model features advanced AI and triple-arm multitasking for domestic efficiency.</p>   
-                            </div>
+                            <a href="./mr_handy.html" style="text-decoration: none; color: inherit;">
+                                <img src="./images/article_images/mr_handy.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                                <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                    <p class="card-text main-card-p"><small class="text-muted"></small>Science & Tech</p>
+                                    <h5 class="card-title main-card-h5">RobCo Unveils Mr. Handy Mark III</h5>
+                                    <p class="card-text main-card-p">The newest model features advanced AI and triple-arm multitasking for domestic efficiency.</p>   
+                                </div>
+                            </a>
                         </div>
 
                         <div class="card shadow w-100 d-flex flex-row flex-md-column">
-                            <img src="./images/article_images/nuclear_fusion.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
-                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
-                                <p class="card-text main-card-p"><small class="text-muted"></small>Science & Tech</p>
-                                <h5 class="card-title main-card-h5">Mass Fusion Achieves Nuclear Breakthrough</h5>
-                                <p class="card-text main-card-p">Scientists report stable, sustained fusion—paving the way for limitless clean energy.</p>
-                            </div>
+                            <a href="./mass_fusion.html" style="text-decoration: none; color: inherit;">
+                                <img src="./images/article_images/nuclear_fusion.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                                <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                    <p class="card-text main-card-p"><small class="text-muted"></small>Science & Tech</p>
+                                    <h5 class="card-title main-card-h5">Mass Fusion Achieves Nuclear Breakthrough</h5>
+                                    <p class="card-text main-card-p">Scientists report stable, sustained fusion—paving the way for limitless clean energy.</p>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="card shadow w-100 d-flex flex-row flex-md-column">
-                            <img src="./images/article_images/nuka_cola_quantum.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
-                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
-                                <p class="card-text main-card-p"><small class="text-muted"></small>Lifestyle & Culture</p>
-                                <h5 class="card-title main-card-h5">Nuka-Cola Launches Quantum Flavor</h5>
-                                <p class="card-text main-card-p">This glowing new soda packs twice the taste and a bold atomic blue sparkle.</p>
-                            </div>
+                            <a href="./nuka_quantum.html" style="text-decoration: none; color: inherit;">
+                                <img src="./images/article_images/nuka_cola_quantum.webp" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                                <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                    <p class="card-text main-card-p"><small class="text-muted"></small>Lifestyle & Culture</p>
+                                    <h5 class="card-title main-card-h5">Nuka-Cola Launches Quantum Flavor</h5>
+                                    <p class="card-text main-card-p">This glowing new soda packs twice the taste and a bold atomic blue sparkle.</p>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="card shadow w-100 d-flex flex-row flex-md-column">
-                            <img src="./images/article_images/vault_76.png" class="col-6 col-md-12 order-1 order-md-0" alt="">
-                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
-                                <p class="card-text main-card-p"><small class="text-muted"></small>Lifestyle & Culture</p>
-                                <h5 class="card-title main-card-h5">Vault 76 Officially Opens Its Doors</h5>
-                                <p class="card-text main-card-p">Residents begin their new lives underground in this state-of-the-art Vault-Tec facility.</p>
-                            </div>
+                            <a href="./vault_76.html" style="text-decoration: none; color: inherit;">
+                                <img src="./images/article_images/vault_76.png" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                                <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                    <p class="card-text main-card-p"><small class="text-muted"></small>Lifestyle & Culture</p>
+                                    <h5 class="card-title main-card-h5">Vault 76 Officially Opens Its Doors</h5>
+                                    <p class="card-text main-card-p">Residents begin their new lives underground in this state-of-the-art Vault-Tec facility.</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
 
@@ -180,39 +183,47 @@
                     <!-- Articles -->
                     <div class="card-group col-12 gap-3 d-flex flex-column flex-md-row justify-content-between mt-3">
                         <div class="card shadow w-100 d-flex flex-row flex-md-column">
-                            <img src="./images/article_images/silver_shroud.avif" class="col-6 col-md-12 order-1 order-md-0" alt="">
-                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
-                                <p class="card-text main-card-p"><small class="text-muted"></small>Entertainment</p>
-                                <h5 class="card-title main-card-h5">Silver Shroud Returns to the Airwaves</h5>
-                                <p class="card-text main-card-p">The masked vigilante’s classic radio dramas are thrilling listeners across the Commonwealth.</p>
-                            </div>
+                            <a href="./silver_shroud.html" style="text-decoration: none; color: inherit;">
+                                <img src="./images/article_images/silver_shroud.avif" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                                <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                    <p class="card-text main-card-p"><small class="text-muted"></small>Entertainment</p>
+                                    <h5 class="card-title main-card-h5">Silver Shroud Returns to the Airwaves</h5>
+                                    <p class="card-text main-card-p">The masked vigilante’s classic radio dramas are thrilling listeners across the Commonwealth.</p>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="card shadow w-100 d-flex flex-row flex-md-column">
-                            <img src="./images/article_images/nuka_world.jpg" class="col-6 col-md-12 order-1 order-md-0" alt="">
-                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
-                                <p class="card-text main-card-p"><small class="text-muted"></small>Entertainment</p>
-                                <h5 class="card-title main-card-h5">Nuka-World Opens to the Public</h5>
-                                <p class="card-text main-card-p">The massive theme park offers fun, thrills, and sugary delights for the whole family.</p>
-                            </div>
+                            <a href="./nuka_world.html" style="text-decoration: none; color: inherit;">
+                                <img src="./images/article_images/nuka_world.jpg" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                                <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                    <p class="card-text main-card-p"><small class="text-muted"></small>Entertainment</p>
+                                    <h5 class="card-title main-card-h5">Nuka-World Opens to the Public</h5>
+                                    <p class="card-text main-card-p">The massive theme park offers fun, thrills, and sugary delights for the whole family.</p>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="card shadow w-100 d-flex flex-row flex-md-column">
-                            <img src="./images/article_images/nuclear_war.png" class="col-6 col-md-12 order-1 order-md-0" alt="">
-                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
-                                <p class="card-text main-card-p"><small class="text-muted"></small>World Affairs</p>
-                                <h5 class="card-title main-card-h5">Tensions Rise Amid Nuclear Concerns</h5>
-                                <p class="card-text main-card-p">Experts warn that growing global conflict could lead to full-scale atomic warfare.</p>
-                            </div>
+                            <a href="./tensions_rise.html" style="text-decoration: none; color: inherit;">
+                                <img src="./images/article_images/nuclear_war.png" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                                <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                    <p class="card-text main-card-p"><small class="text-muted"></small>World Affairs</p>
+                                    <h5 class="card-title main-card-h5">Tensions Rise Amid Nuclear Concerns</h5>
+                                    <p class="card-text main-card-p">Experts warn that growing global conflict could lead to full-scale atomic warfare.</p>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="card shadow w-100 d-flex flex-row flex-md-column">
-                            <img src="./images/article_images/las_vegas.jpg" class="col-6 col-md-12 order-1 order-md-0" alt="">
-                            <div class="card-body order-0 order-md-1 col-6 col-md-12">
-                                <p class="card-text main-card-p"><small class="text-muted"></small>Business & Economy</p>
-                                <h5 class="card-title main-card-h5">Mr. House: The Man Behind Las Vegas' Prosperity</h5>
-                                <p class="card-text main-card-p">Robert House controls Las Vegas, shaping its future with tech and unwavering authority.</p>
-                            </div>
+                            <a href="./mr_house.html" style="text-decoration: none; color: inherit;">
+                                <img src="./images/article_images/las_vegas.jpg" class="col-6 col-md-12 order-1 order-md-0" alt="">
+                                <div class="card-body order-0 order-md-1 col-6 col-md-12">
+                                    <p class="card-text main-card-p"><small class="text-muted"></small>Business & Economy</p>
+                                    <h5 class="card-title main-card-h5">Mr. House: The Man Behind Las Vegas' Prosperity</h5>
+                                    <p class="card-text main-card-p">Robert House controls Las Vegas, shaping its future with tech and unwavering authority.</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -250,8 +261,29 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     </body>
    
-    <footer class="bg-dark text-light py-4 mt-auto">
+    <footer class="d-flex flex-column anton-regular bg-dark text-light pt-4 mt-auto" style="letter-spacing: 1px;">
+        <div class="d-flex justify-content-around align-items-center flex-column flex-lg-row mb-4">
+            <div class="d-flex flex-column justify-content-center text-center mb-2 col-10 col-lg-3">
+                <h5>Galaxy News Network</h5>
+                <p>“Bringing you the truth, no matter how bad it hurts!”</p>
+            </div>
+            
+            <div class="d-flex justify-content-center col-10 col-lg-3">
+                <img src="./images/gnn_favicon.png">
+            </div>
 
+            <div class="d-flex flex-column text-center mt-2 col-10 col-lg-3">
+                <p>1143 Museum Way
+                    Washington, D.C. 20001</p>
+                <p>(202) GNR-WAVE (202-467-9283)</p>
+                <p>three.dog@gnr.capital</p>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2076 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">GNN.com</a>
+          </div>
     </footer>
 
     <!-- Spacer for Player -->
