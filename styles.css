@@ -4,6 +4,8 @@
     --customBlue: #2c63ae; 
 }
 
+
+/* Fonts */
 .anton-regular {
     font-family: "Anton", sans-serif;
     font-weight: 400;
@@ -22,7 +24,6 @@
     font-style: italic;
 }
   
-
 .customBackgroundColor {
     background-color: var(--backgroundColor);
 }
@@ -112,7 +113,7 @@ html, body {
     height: 180px;
 }
 
-.card h5 {
+.main-card-h5 {
     font-family: "DM Serif Text", serif;
     font-weight: 300;
     font-style: bold;
@@ -120,11 +121,11 @@ html, body {
     transition: color 0.4s ease;
 }
 
-.card h5:hover {
+.main-card-h5:hover {
     color: var(--customBlue);
 }
 
-.card p {
+.main-card-p {
     font-family: "DM Serif Text", serif;
     font-weight: 400;
     font-style: normal;
@@ -132,7 +133,7 @@ html, body {
     transition: color 0.4s ease;
 }
 
-.card p:hover {
+.main-card-p:hover {
     color: var(--customBlue);
 }
 
@@ -188,4 +189,29 @@ html, body {
 
 .volumeSlider {
     background-color: black;
+}
+
+/* Articles */
+@media (min-width: 1200px) {
+    .custom-max-width {
+      max-width: 900px;
+      margin: 0 auto; /* center it */
+    }
+  }
+
+.article-card-h5 {
+    font-family: "DM Serif Text", serif;
+    font-weight: 300;
+    font-style: bold;
+    font-size: larger;
+}
+
+.article-card-p {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    text-justify: inter-word;
+    text-wrap: wrap;
+    word-spacing: 3px;
 }
