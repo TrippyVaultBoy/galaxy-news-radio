@@ -71,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const player = document.getElementById("audioPlayer");
+    player.setAttribute('playsinline', '');
+    player.setAttribute('webkit-playsinline', '');
+
     const playButton = document.getElementById("play_pause_button");
     const muteButton = document.getElementById("muteButton");
     const volumeSlider = document.getElementById("volumeSlider");
@@ -126,7 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
         player.play();
     }
 
+    function initAudioContext() {
+        // Create and resume AudioContext on user interaction
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioContext.state === 'suspended') {
+            audioContext.resume();
+        }
+    }
+    
     playButton.addEventListener('click', () => {
+        initAudioContext();
         if (!isPlaying) {
             currentTrack = getRandomTrack(null);
             buildSegment(currentTrack);
@@ -164,8 +176,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     volumeSlider.addEventListener('input', () => {
-        player.volume = volumeSlider.value;
-        tempVolume = volumeSlider.value;
-        console.log("Volume set to:", volumeSlider.value);
+        const volume = parseFloat(volumeSlider.value);
+        player.volume = Math.min(Math.max(volume, 0), 1);
+        tempVolume = player.volume;
+    });
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "hidden" && player.playing) {
+            player.pause();
+        }
+        if (document.visibilityState === "visible" && isPlaying) {
+            player.play().catch(e => console.error('Playback failed:', e));
+        }
     });
 })
