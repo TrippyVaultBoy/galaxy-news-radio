@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             intro: "./audio/intros/maybe_intro.mp3",
             outro: "./audio/outros/maybe_outro.mp3",
             image: "./images/artists/ink_spots.jpg",
+            alt: "The Ink Spots",
         },
         { 
             name: "Mighty Mighty Man",
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             intro: "./audio/intros/mighty_mighty_man_intro.mp3",
             outro: "./audio/outros/mighty_mighty_man_outro.mp3",
             image: "./images/artists/Roy_brown.jpg",
+            alt: "Roy Brown",
         },
         { 
             name: "Way Back Home",
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             intro: "./audio/intros/way_back_home_intro.mp3",
             outro: "./audio/outros/way_back_home_outro.mp3",
             image: "./images/artists/Bob_Crosby.jpeg",
+            alt: "Bob Crosby & The Bobcats",
         },
         {
             name: "Into Each Life Some Rain Must Fall",
@@ -32,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             intro: "./audio/intros/into_each_life_some_rain_must_fall_intro.mp3",
             outro: "./audio/outros/into_each_life_some_rain_must_fall_outro.mp3",
             image: "./images/artists/Ella_Fitzgerald.webp",
+            alt: "Ella Fitzgerald & The Ink Spots",
         },
         {
             name: "Anything Goes",
@@ -40,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             intro: "./audio/intros/anything_goes_intro.mp3",
             outro: "./audio/outros/anything_goes_outro.mp3",
             image: "./images/artists/Cole_Porter.jpg",
+            alt: "Cole Porter",
         },
         {
             name: "I Don't Want To Set The World On Fire",
@@ -48,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             intro: "./audio/intros/i_dont_want_to_set_the_world_on_fire_intro.mp3",
             outro: "./audio/outros/i_dont_want_to_set_the_world_on_fire_outro.mp3",
             image: "./images/artists/ink_spots.jpg",
+            alt: "The Ink Spots",
         },
     ];
 
@@ -108,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name.textContent = track.name;
         artist.textContent = track.artist;
         image.src = track.image;
+        image.alt = track.alt;
 
         console.log("Now playing:", track.name, "by", track.artist);
     }
