@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Music Player
+    
+    // playlists of music tracks and corresponding into and outro tracks
     const playlist = [
         { 
             name: "Maybe",
@@ -57,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     ];
 
+    // hello tracks to play before and after each song
     const hellos = [
         "./audio/hellos/hello_0.mp3",
         "./audio/hellos/hello_1.mp3",
@@ -71,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "./audio/hellos/hello_10.mp3",
     ];
 
+    // transition tracks to play after each hello
     const transitions = [
         "./audio/transitions/transition_0.mp3",
         "./audio/transitions/transition_1.mp3",
@@ -90,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let segmentQueue = []; //intro, song, outro
     let isPlaying = false;
 
+    // Fetches next track
     function getRandomTrack(exclude) {
         let next;
         do {
@@ -99,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Builds each segemnt of hello, transition, track intro, track and track outro
     function buildSegment(track) {
         let hello = hellos[Math.floor(Math.random() * hellos.length)];
         let transition = transitions[Math.floor(Math.random() * transitions.length)];
@@ -106,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         segmentQueue = [hello, transition, track.intro, track.song, track.outro];
     }
 
+    // Updates the music player with current track metadata
     function updateTrackInfo(track) {
         const name = document.getElementById("track_title");
         const artist = document.getElementById("track_artist");
@@ -119,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Now playing:", track.name, "by", track.artist);
     }
 
+    // Plays the next track in the segment
     function playNextInQueue() {
         if (segmentQueue.length === 0) {
             currentTrack = getRandomTrack(currentTrack);
@@ -136,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         player.play();
     }
 
+    // Initializes audio context for apple devices
     function initAudioContext() {
         // Create and resume AudioContext on user interaction
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -143,7 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
             audioContext.resume();
         }
     }
-    
+   
+    // Play button event listeners
     playButton.addEventListener('click', () => {
         initAudioContext();
         if (!isPlaying) {
@@ -161,10 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Player event listeners
     player.addEventListener('ended', () => {
         playNextInQueue();
     });
 
+    // Mute button event listeners
     muteButton.addEventListener('click', () => {
         if (player.muted) {
             player.muted = false;
@@ -182,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Volume slider event listeners
     volumeSlider.addEventListener('input', () => {
         const volume = parseFloat(volumeSlider.value);
         player.volume = Math.min(Math.max(volume, 0), 1);
